@@ -17,17 +17,20 @@ const whatToDoForLunch = function(hungry, availableTime) {
   if (hungry === false) {
     console.log("Get back to work!");
     return;
-    }
-  
-    const result = howMuchTime(availableTime)
-    console.log(result)
   }
 
-function howMuchTime(availableTime) {
-  if (availableTime < 20) return "Pick up something and eat in the lab!";
-  if (availableTime >= 20 && availableTime <= 30) return "Try a place nearby!";
-  return "Maybe we don't have much time to spare!"
-}
+  if (availableTime < 20) {
+    console.log("Pick up something and eat in the lab!");
+    return;
+  }
+  
+  if (availableTime <= 30) {
+    console.log("Try a place nearby!");
+    return; 
+  }
+  
+  console.log("Maybe we don't have much time to spare!")
+};
 
 
 
