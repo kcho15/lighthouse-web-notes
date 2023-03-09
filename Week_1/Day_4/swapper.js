@@ -20,8 +20,8 @@ const swapper = function (key1, object1, key2, object2) {
 // Tests 
 swapper("a", { a: 1, b: 2, c: 3 }, "c", { a: 4, b: 3, c: 5 });
 // Swap!
-// object1: { a: 5 , b: 2, c: 3 }
-// object2: { a: 4, b: 3, c: 1 }
+// object1: { a: 5 , b: 2, c: 3 } object 1 a: is now object 2's c: 
+// object2: { a: 4, b: 3, c: 1 } object 2's c: is now object 1's a: 
 
 swapper("b", { a: 8, b: 7, c: 6 }, "d", { a: 5, b: 1, c: 2, d: 12 });
 // Swap!
