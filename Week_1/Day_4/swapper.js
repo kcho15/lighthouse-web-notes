@@ -2,16 +2,11 @@
 const swapper = function (key1, object1, key2, object2) {
   console.log("Swap!");
 
-  // Put your solution here
-  let swappedObj = {}
-  
-  for (let element in object1) {
-    if (element === key1) {
-      swappedObj[element] = object1[element];
-      object1[element] = object2[key2]; // swapped elements 
-      object2[key2] = swappedObj[element] 
-    } 
-  }
+  let swappedObj = {};
+
+  swappedObj[key1] = object1[key1];   // Set object1 to a placeholder, swappedObj
+  object1[key1] = object2[key2];       // Swap object1 to object2 
+  object2[key2] = swappedObj[key1]      // Swap object2 to our placeholder with object1's original value
 
   console.log("object1: ", object1);
   console.log("object2: ", object2);
